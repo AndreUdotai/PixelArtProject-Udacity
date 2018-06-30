@@ -30,7 +30,7 @@ let makeGrid = function() {
 	canvas.find('td').click(colorInput);
 }
 
-// When size is submitted by the user, call makeGrid()
+// When button is clicked, it is stopped from submitting and makeGrid is called
 $('#submit').click(function(event) {
   event.preventDefault();
   makeGrid();
