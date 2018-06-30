@@ -5,7 +5,7 @@ const 	canvas = $('#pixelCanvas'),
 // Select color input
 let colorInput = function() {
 		// Select the value of the picked color
-		var pickedColor = $("#colorPicker").val();
+		let pickedColor = $("#colorPicker").val();
 		// Change the background color to picked color
 		$(this).css('background-color', pickedColor);
 	}
@@ -34,5 +34,17 @@ let makeGrid = function() {
 $('#submit').click(function(event) {
   event.preventDefault();
   makeGrid();
+});
+
+$('#colorPad').mouseenter(function(){
+	$('#first').css('color', 'pink');
+	$('#second').css('color', 'rgb(176, 110, 236)');
+	$('#third').css('color', 'rgb(26, 236, 164)');
+});
+
+$('#colorPad').mouseleave(function(){
+	$('#first').css('color', 'black');
+	$('#second').css('color', 'black');
+	$('#third').css('color', 'black');
 });
 
